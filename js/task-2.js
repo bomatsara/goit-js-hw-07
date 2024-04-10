@@ -14,7 +14,7 @@ const images = [
 ];
 
 const imageHtmlElement = ({ url, alt }) => {
-  return `<img src="${url}" alt="${alt}">`;
+  return `<li><img src="${url}" alt="${alt}"></li>`;
 };
 
 document.addEventListener('DOMContentLoaded', (event) => {

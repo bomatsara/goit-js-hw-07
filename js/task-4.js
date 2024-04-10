@@ -10,7 +10,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (!allFilledChecker) {
       alert('All form fields must be filled in');
     } else {
-      inputsArray.forEach(input => console.log(`${input.name}: ${input.value}`));
+      const objValues = inputsArray.reduce((ac, input) => {
+        ac[input.name] = input.value;
+        return ac;
+      }, {});
+
+      console.log(objValues);
+      form.reset();
     }
   });
 });
